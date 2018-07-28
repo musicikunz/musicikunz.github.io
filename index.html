@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>nhạc của kun</title>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/index.css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+		<style>
+			    @font-face {
+      font-family: "Bitstream Vera Serif Bold";
+      src: url("font/CODE Bold.otf");
+    }
+h2 {
+	font-family: 'Bitstream Vera Serif Bold';
+}
+		</style>
+	</head>
+	<body onload='startTime()'>
+		<div class="jumbotron text-center" style="margin-bottom:0">
+			<h1><a href="abc">꧁༺༻꧂</a></h1>
+			<p>¡ ƙʊղ ʑ</p>
+			<p id='timer'></p>
+		</div>
+		<div class="container">
+			<div class="mp3">
+				<h2>Way back home</h2>
+				<p><small>tác giả : shaun</small></p>
+				<img src="img/maxresdefault.jpg" alt="">
+				<p><audio controls>
+  				<source src="mp3/way back home.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio></p>
+			</div>
+			<div class="mp3">
+				<h2>Call me</h2>
+				<p><small>Tác giả : <strong>Tritonal </strong></small></p>
+				<img src="img/tải xuống.jpg" alt="call me">
+				<p><audio controls>
+  				<source src="mp3/Call Me - Tritonal - NhacCuaTui.MP3" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio></p>
+			</div>
+			<div class="mp3">
+				<h2>Why do i</h2>
+				<p><small>Tác giả : Bri Tolani</small></p>
+				<img src="img/maxresdefault (1).jpg" alt="why do i">
+				<p><audio controls>
+  				<source src="mp3/Unknown-Brain-Why-Do-I_-feat.-Bri-Tolani-NCS-Release.mp3" type="audio/mpeg">
+				Your browser does not support the audio element.
+				</audio></p>
+			</div>
+		</div>
+		<script>
+			function checkTime(i) 
+			{
+				if (i < 10) {
+					i = "0" + i;
+				}
+				return i;
+			}
+			function startTime() 
+			{
+    // Lấy Object ngày hiện tại
+    var today = new Date();
+
+    // Giờ, phút, giây hiện tại
+    var h = today.getHours();
+    var m = today.getMinutes();
+    var s = today.getSeconds();
+
+    // Chuyển đổi sang dạng 01, 02, 03
+    m = checkTime(m);
+    s = checkTime(s);
+
+    // Ghi ra trình duyệt
+    document.getElementById('timer').innerHTML = h + ":" + m + ":" + s;
+
+    // Dùng hàm setTimeout để thiết lập gọi lại 0.5 giây / lần
+    var t = setTimeout(function() {
+    	startTime();
+    }, 500);
+}
+</script>
+</body>
+</html>
