@@ -87,12 +87,7 @@ audio {width: 233px;height: 44px;}
 img:hover {
     width: 160px;
 }
-
 .mp3 {
-    width: 100%;
-    px; */
+    width:  100%;
 }
-}
-@media (min-width: 768px) {
-	*{}
 }
